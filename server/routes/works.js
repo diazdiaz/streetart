@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const Works = require('../models/Works');
-const upload = require('multer');
 
 
 // Retrive ALL
@@ -13,8 +12,7 @@ router.get("/", (req, res, next) => {
   
   // Create
   router.post("/", (req, res, next) => {
-    const { type, style, description, price } = req.body;
-    const { image} = `/uploads/${req.file.filename}`
+    const { type, style, description, price, image } = req.body;
   
     const newWork = { type, style, description, price, image};
   

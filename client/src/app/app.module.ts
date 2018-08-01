@@ -13,6 +13,7 @@ import { ArtistFormComponent } from './artist-form/artist-form.component';
 import { WorksComponent } from './works/works.component';
 import { HomeComponent } from './home/home.component';
 import { FileSelectDirective } from "ng2-file-upload";
+import { WorksListComponent } from './works-list/works-list.component';
 
 @NgModule({
    declarations: [
@@ -22,7 +23,8 @@ import { FileSelectDirective } from "ng2-file-upload";
       ArtistFormComponent,
       WorksComponent,
       HomeComponent,
-      FileSelectDirective
+      FileSelectDirective,
+      WorksListComponent
 
    ],
    imports: [

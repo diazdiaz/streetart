@@ -5,6 +5,7 @@ import { ArtistFormComponent } from './artist-form/artist-form.component';
 import { AppComponent } from './app.component';
 import { WorksComponent } from './works/works.component';
 import { HomeComponent } from './home/home.component';
+import { WorksListComponent } from './works-list/works-list.component';
 
 export const routes: Routes = [
   { path:'', component:HomeComponent},
@@ -12,5 +13,6 @@ export const routes: Routes = [
   { path:'signup', component:SignupComponent},
   { path:'login', component:LoginComponent},
   { path:'artistform', component:ArtistFormComponent},
-  { path:'works', component:WorksComponent}
+  { path:'works', component:WorksComponent},
+  { path:'workslist', component:WorksListComponent}
 ];
