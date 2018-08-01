@@ -5,7 +5,9 @@
   <br>
   <label> Password </label>
   <input type="password" [(ngModel)]="password" name="password"/>
+  <label>Are you an artist?</label>
+  <input type="checkbox" name="artist" value="artist" [(ngModel)]="artist"/>
 
-  <button (click)="signup(username, password)"> SIGNUP </button>
+  <button (click)="signup(username, password, artist)"> SIGNUP </button>
 </form>
 <p class="error"> {{ error }} </p>

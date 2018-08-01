@@ -9,12 +9,21 @@ import { routes } from './routes';
 import { HttpModule } from '@angular/http';
 import { SessionService } from 'services/session';
 import { FormsModule } from '@angular/forms';
+import { ArtistFormComponent } from './artist-form/artist-form.component';
+import { WorksComponent } from './works/works.component';
+import { HomeComponent } from './home/home.component';
+import { FileSelectDirective } from "ng2-file-upload";
 
 @NgModule({
    declarations: [
       AppComponent,
       SignupComponent,
-      LoginComponent
+      LoginComponent,
+      ArtistFormComponent,
+      WorksComponent,
+      HomeComponent,
+      FileSelectDirective
+
    ],
    imports: [
       BrowserModule,

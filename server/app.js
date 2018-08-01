@@ -13,6 +13,7 @@ const session    = require("express-session");
 const MongoStore = require('connect-mongo')(session);
 const flash      = require("connect-flash");
 const cors = require('cors');
+const multer = require('multer');
     
 
 mongoose.Promise = Promise;
@@ -41,6 +42,18 @@ var corsOptions = {
   credentials: true
 };
 app.use(cors(corsOptions));
+
+//Multer set-up(file-upload)
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './public/uploads/')
+  },
+  filename: (req, file, cb) => {
+    cb(null, `${Date.now()}${path.extname(file.originalname)}`)
+  }
+});
+
+const upload   = multer({ storage });
 
 
 
@@ -95,8 +108,9 @@ const index = require('./routes/index');
 app.use('/', index);
 
 const router = require('./routes/auth');
-app.use('/auth', router);
+const project = require('./routes/works')
 
-app.use('/api/auth', router);
+app.use('/auth', router);
+app.use('/api/works',project);
 
 module.exports = app;

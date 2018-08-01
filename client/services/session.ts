@@ -14,6 +14,7 @@ interface UserObject{
 }
 
 
+
 @Injectable()
 export class SessionService {
 
@@ -44,8 +45,9 @@ export class SessionService {
     return e;
   }
 
-  signup(username:string, password:string): Observable<object>{
-    return this.http.post(`${BASEURL}/api/auth/signup`,{username,password},this.options).pipe(
+  signup(username:string, password:string, artist:boolean): Observable<object>{
+ 
+    return this.http.post(`${BASEURL}/api/auth/signup`,{username,password,artist},this.options).pipe(
       map( (res:Response) => {
         let data = res.json();
         this.user = data.user;

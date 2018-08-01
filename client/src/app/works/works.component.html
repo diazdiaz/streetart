@@ -1,0 +1,25 @@
+<h1> Add a masterpiece </h1>
+
+
+<form>
+    <label> Type </label>
+    <input type="text" [(ngModel)]="newWork.type" name="type" required />
+
+    <label> Style </label>
+    <input type="text" [(ngModel)]="newWork.style" name="style" required />
+
+    <label> Description  </label>
+    <input type="text" [(ngModel)]="newWork.description" name="description" />
+
+    <label>Price</label>
+    <input type="text" [(ngModel)]="newWork.price" name="price" required />
+
+    <label>Image</label>
+    <input type="text" [(ngModel)]="newWork.image" name="image" />
+
+    
+
+
+  <button (click)="submit()"> Guardar </button>
+</form>
+

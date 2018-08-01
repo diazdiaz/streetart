@@ -15,9 +15,11 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
 
-  signup(username:string, password:string){
+  signup(username:string, password:string, artist:boolean){
     console.log("signup....");
-    this.sessionService.signup(username,password).subscribe( (user:any) =>{
+    if(artist == undefined)artist = false;
+
+    this.sessionService.signup(username,password,artist).subscribe( (user:any) =>{
       console.log(`WELCOME USER ${user.username}, register OK`);
       console.log(user);
       this.router.navigate(['/']);
