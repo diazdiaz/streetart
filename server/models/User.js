@@ -8,6 +8,9 @@ const userSchema = new Schema({
     type:Boolean,
     required:true
   },
+  works: [{
+    type: Schema.Types.ObjectId, ref:"Works"
+   }],
 }, {
   timestamps: {
     createdAt: 'created_at',

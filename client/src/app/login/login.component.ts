@@ -18,10 +18,10 @@ export class LoginComponent implements OnInit {
   login(){
     
     console.log("login....");
-    this.sessionService.login(this.username,this.password).subscribe( user => {
-      console.log(user);
-      this.router.navigate(['/workslist'])
-    });
-  }
+    this.sessionService.login(this.username,this.password).subscribe(() => this.router.navigate(['/workslist'])
+ )
+}  
+}   
+  
 
-}
+

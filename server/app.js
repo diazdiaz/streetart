@@ -110,7 +110,7 @@ app.use('/', index);
 const router = require('./routes/auth');
 const project = require('./routes/works')
 
-app.use('/auth', router);
+app.use('/api/auth', router);
 app.use('/api/works',project);
 
 module.exports = app;

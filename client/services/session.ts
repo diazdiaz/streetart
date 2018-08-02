@@ -19,6 +19,7 @@ interface UserObject{
 export class SessionService {
 
   user:UserObject;
+ 
 
   options:object = {withCredentials:true};
 
@@ -42,6 +43,7 @@ export class SessionService {
     console.log('SessionServiceError')
     console.log(e.message);
     console.log(e);
+    
     return e;
   }
 
@@ -51,6 +53,7 @@ export class SessionService {
       map( (res:Response) => {
         let data = res.json();
         this.user = data.user;
+        console.log(SessionService)
         return this.user;
       }),
       catchError( e => of(this.errorHandler(e)))
@@ -76,5 +79,4 @@ export class SessionService {
       catchError( e => of(this.errorHandler(e)))
     )
   }
-
 }

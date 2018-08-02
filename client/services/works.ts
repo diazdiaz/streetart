@@ -27,9 +27,10 @@ works:WorksObject;
       .pipe(map(res => res.json()));
   }
 
-  newWork(works) {
+  newWork(works,user) {
+    const id = user._id
     return this.http
-      .post(`${this.BASE_URL}/api/works`, works)
+      .post(`${this.BASE_URL}/api/works`, {works,id})
       .pipe(map(res => res.json()));
   }
 

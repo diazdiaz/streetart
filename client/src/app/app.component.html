@@ -1,14 +1,31 @@
 <div style="text-align:center">
-  <h1 *ngIf="!sessionService.user" >Welcome to {{ title }}!</h1>
-  <h1 *ngIf="sessionService.user" >Welcome {{ sessionService.user.username }}!</h1>
+  <h1 *ngIf="!sessionService.user">Welcome to {{ title }}!</h1>
+  <h1 *ngIf="sessionService.user">Welcome {{ sessionService.user.username }}!</h1>
 
 </div>
+
 <ul>
- 
-  <li *ngIf="!sessionService.user"><a [routerLink]="['/signup']">Signup</a></li>
-  <li *ngIf="!sessionService.user"><a [routerLink]="['/login']">Login</a></li>
-  <li *ngIf="sessionService.user"><a href="#" (click)="logout()">Logout</a></li>
+  <li *ngIf="!sessionService.user">
+    <a [routerLink]="['/signup']">Signup</a>
+  </li>
+  <li *ngIf="!sessionService.user">
+    <a [routerLink]="['/login']">Login</a>
+  </li>
+  <li *ngIf="sessionService.user">
+    <a href="#" (click)="logout()">Logout</a>
+  </li>
 </ul>
 
-<router-outlet></router-outlet>
+<nav *ngIf="sessionService.user">
+  <div class="nav-container">
+    <ul>
+      <a [routerLink]="['/works']">My profile</a> 
+      <li *ngIf="sessionService.user.artist">
+          <a [routerLink]="['/artists']">Artists</a>
+      </li>
 
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

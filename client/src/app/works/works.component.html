@@ -2,13 +2,14 @@
 
 
 <form>
-    <label> Type </label>
-    <input type="text" [(ngModel)]="newWork.type" name="type" required />
+  <select [(ngModel)]="selectedValue" [ngModelOptions]="{standalone: true}"> 
+    <option *ngFor="let c of countries" [ngValue]="c">{{c.name}}</option>
+  </select>
 
-    <label> Style </label>
+    <label>Style</label>
     <input type="text" [(ngModel)]="newWork.style" name="style" required />
 
-    <label> Description  </label>
+    <label>Description</label>
     <input type="text" [(ngModel)]="newWork.description" name="description" />
 
     <label>Price</label>
@@ -16,6 +17,8 @@
 
     <label>Image</label>
     <input type="text" [(ngModel)]="newWork.image" name="image" />
+
+    
 
     
 

@@ -80,6 +80,14 @@ router.use((err, req, res, next) => {
   res.status(500).json({ message: err.message });
 })
 
+router.get("/", (req, res, next) => {
+  User.find()
+  .populate('artist')
+    .then(objects => res.json(objects))
+    console.log(objects)
+    .catch(e => next(e));
+});
+
 module.exports = router;
 
 
