@@ -1,10 +1,10 @@
 <div style="text-align:center">
-  <h1 *ngIf="!sessionService.user">Welcome to {{ title }}!</h1>
+  <h1 *ngIf="!sessionService.user">Welcome to StreetArt</h1>
   <h1 *ngIf="sessionService.user">Welcome {{ sessionService.user.username }}!</h1>
 
 </div>
 
-<ul>
+<!-- <ul>
   <li *ngIf="!sessionService.user">
     <a [routerLink]="['/signup']">Signup</a>
   </li>
@@ -30,6 +30,6 @@
 
     </ul>
   </div>
-</nav>
+</nav> -->
 
 <router-outlet></router-outlet>

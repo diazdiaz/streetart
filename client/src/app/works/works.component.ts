@@ -17,7 +17,7 @@ export class WorksComponent implements OnInit {
     price:'',
     image:'', 
   }
-  countries = [
+  typeworks = [
     {id: 1, name: "Sculpture"},
     {id: 2, name: "Painting"},
     {id: 3, name: "Photography"},
@@ -33,7 +33,7 @@ export class WorksComponent implements OnInit {
     console.log(this.selectedValue);
     if(this.selectedValue==undefined)this.selectedValue = 'Other'
     this.newWork.type = this.selectedValue.name;
-    //this.wS.newWork(this.newWork,this.session.user).subscribe(() => this.router.navigate(["/"]))
+    this.wS.newWork(this.newWork,this.session.user).subscribe(() => this.router.navigate(["/"]))
   }
 
 

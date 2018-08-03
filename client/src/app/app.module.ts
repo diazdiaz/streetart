@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { FileSelectDirective } from "ng2-file-upload";
 import { WorksListComponent } from './works-list/works-list.component';
 import { ArtistsComponent } from './artists/artists.component';
+import { ClarityModule } from '@clr/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { ArtistsComponent } from './artists/artists.component';
       BrowserModule,
       RouterModule.forRoot(routes),
       HttpModule,
-      FormsModule
+      FormsModule,
+      ClarityModule,
+      BrowserAnimationsModule
    ],
    providers: [SessionService],
    bootstrap: [

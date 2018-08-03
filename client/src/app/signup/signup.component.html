@@ -1,4 +1,4 @@
-<form>
+<!-- <form>
   <h2> Signup </h2>
   <label> Username </label>
   <input type="text" [(ngModel)]="username" name="username"/>
@@ -10,4 +10,32 @@
 
   <button (click)="signup(username, password, artist)"> SIGNUP </button>
 </form>
-<p class="error"> {{ error }} </p>
+<p class="error"> {{ error }} </p> -->
+
+
+<div class="login-wrapper">
+    <form class="login">
+        <section class="title">
+            <h3 class="welcome">Welcome to</h3>
+            StreetArt
+            <h5 class="hint">Signup to enjoy the full features</h5>
+        </section>
+        <div class="login-group">
+            <div class="auth-source select">
+            <h2> Signup </h2>   
+            </div>
+            <label> Username</label>
+            <input class="username" [(ngModel)]="username" name="username" type="text" id="login_username" placeholder="Username">
+            <label> Password</label>
+            <input class="password" [(ngModel)]="password" type="password" name="password" id="login_password" placeholder="Password" >
+            <label>Are you an artist?</label>
+            <input type="checkbox" name="artist" value="artist" [(ngModel)]="artist"/>
+          
+            <a [routerLink]="['/login']">Already a member? Login here</a>
+            <button (click)="signup(username, password, artist)"> SIGNUP </button>
+            
+           
+        </div>
+    </form>
+  <p class="error"> {{ error }} </p>
+</div>
