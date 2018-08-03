@@ -1,3 +1,10 @@
 <p>
   artists works!
 </p>
+
+<button (click)=artist()>artist</button>
+
+
+<div *ngFor="let artist of artists"> 
+  {{artist.username}}
+</div>

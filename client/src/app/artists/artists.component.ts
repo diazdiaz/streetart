@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SessionService } from 'services/session';
 
 @Component({
   selector: 'app-artists',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistsComponent implements OnInit {
 
-  constructor() { }
+  artists:Array<object>;
+  constructor(private session:SessionService) { }
 
   ngOnInit() {
+  }
+
+  artist(){
+    this.session.artist().subscribe(res=>{
+      this.artists = res;
+    })
   }
 
 }

@@ -19,7 +19,11 @@
 <nav *ngIf="sessionService.user">
   <div class="nav-container">
     <ul>
-      <a [routerLink]="['/works']">My profile</a> 
+      <a [routerLink]="['/works']">Add a work</a> 
+
+      <li *ngIf="sessionService.user.artist">
+          <a [routerLink]="['/artists']">Artists</a>
+      </li>
       <li *ngIf="sessionService.user.artist">
           <a [routerLink]="['/artists']">Artists</a>
       </li>

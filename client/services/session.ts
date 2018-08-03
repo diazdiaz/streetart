@@ -79,4 +79,12 @@ export class SessionService {
       catchError( e => of(this.errorHandler(e)))
     )
   }
+  artist(){
+    return this.http.get(`${BASEURL}/api/auth/artist`,this.options).pipe(
+      map( (res:Response) => {
+        return res.json()
+      }),
+      catchError( e => of(this.errorHandler(e)))
+    )
+  }
 }
