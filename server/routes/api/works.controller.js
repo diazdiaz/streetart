@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const Works = require("../models/Works");
-const artist = require("../models/Artista");
-const user = require("../models/User");
+const Works = require("../../models/Works");
+const artist = require("../../models/Artista");
+const user = require("../../models/User");
 
 // Retrive ALL
 router.get("/", (req, res, next) => {

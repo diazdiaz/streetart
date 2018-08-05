@@ -12,11 +12,13 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { WorksComponent } from "./Components/works/works.component";
 import { WorksListComponent } from "./Components/works-list/works-list.component";
 import { ArtistsComponent } from "./Components/artists/artists.component";
-import { HomeComponent } from "./Components/home/home.component";
 import { SignupComponent } from "./Components/signup/signup.component";
 import { LoginComponent } from "./Components/login/login.component";
 import { isLoggedInGuardService } from "./guards/isLoggedIn.guard";
 import { WorksService } from "services/works";
+import { EditProfileComponent } from "./Components/user/edit-profile/edit-profile.component";
+import { UserProfileComponent } from "./Components/user/user-profile/user-profile.component";
+import { UserService } from "services/user";
 
 @NgModule({
   declarations: [
@@ -24,10 +26,11 @@ import { WorksService } from "services/works";
     SignupComponent,
     LoginComponent,
     WorksComponent,
-    HomeComponent,
     FileSelectDirective,
     WorksListComponent,
-    ArtistsComponent
+    ArtistsComponent,
+    EditProfileComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { WorksService } from "services/works";
   providers: [
       SessionService,
       isLoggedInGuardService,
-      WorksService
+      WorksService,
+      UserService
 ],
   bootstrap: [AppComponent]
 })

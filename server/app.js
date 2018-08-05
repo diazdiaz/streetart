@@ -104,13 +104,16 @@ app.use(flash());
 require('./passport')(app);
     
 
+
+
+
 const index = require('./routes/index');
 app.use('/', index);
 
-const router = require('./routes/auth');
-const project = require('./routes/works')
+// const router = require('./routes/auth');
+// const project = require('./routes/works')
 
-app.use('/api/auth', router);
-app.use('/api/works',project);
+// app.use('/api/auth', router);
+// app.use('/api/works',project);
 
 module.exports = app;
