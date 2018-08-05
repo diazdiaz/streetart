@@ -1,52 +1,25 @@
-<div style="text-align:center">
-  <h1 *ngIf="!sessionService.user">Welcome to StreetArt</h1>
-  <h1 *ngIf="sessionService.user">Welcome {{ sessionService.user.username }}!</h1>
 
-</div>
-
- <ul>
-  <!-- <li *ngIf="!sessionService.user">
-    <a [routerLink]="['/signup']">Signup</a>
-  </li>
-  <li *ngIf="!sessionService.user">
-    <a [routerLink]="['/login']">Login</a>
-  </li> -->
-  <li *ngIf="sessionService.user">
-    <a href="#" (click)="logout()">Logout</a>
-  </li>
-</ul>
-
-<nav *ngIf="sessionService.user">
-  <div class="nav-container">
-    <ul>
-      <a [routerLink]="['/works']">Add a work</a> 
-
-      <li *ngIf="sessionService.user.artist">
-          <a [routerLink]="['/artists']">Artists</a>
-      </li>
-      
-
-    </ul>
-  </div>
-</nav> 
 
 
 <header class="header-6" *ngIf="sessionService.user">
     <div class="branding">
         <a href="..." class="nav-link">
             <clr-icon shape="vm-bug"></clr-icon>
-            <span class="title">Street Art</span>
+            <span class="title">Street Art |   Welcome {{ sessionService.user.username }}! </span>
         </a>
     </div>
     <div class="header-nav">
-        <a href="..." class="active nav-link"><span class="nav-text">Artists</span></a>
-        <a href="..." class="nav-link"><span class="nav-text">My profile</span></a>
-        <a *ngIf="sessionService.user" href="#" class="nav-link" (click)="logout()"><span class="nav-text">Logout</span></a>
-        <a href="..." class="active nav-link"><span class="nav-text">Artists</span></a>
+        <a href="..." class="active nav-link" [routerLink]="['/artists']"><span class="nav-text">Artists</span></a>
+        <a href="..." class=" active nav-link"><span class="nav-text">My profile</span></a>
+        <a *ngIf="sessionService.user" href="#" class=" active nav-link" (click)="logout()"><span class="nav-text">Logout</span></a>
+        <a href="..." *ngIf="sessionService.user.artist" class="active nav-link"><span class="nav-text">My Profile</span></a>
+        <a href="..." *ngIf="sessionService.user.artist" class="active nav-link" [routerLink]="['/works']"><span class="nav-text">Add a masterpiece</span></a>
         
     </div>
+    
     <div class="header-actions">
-        <a href="..." class="nav-link nav-icon">
+        <a *ngIf="sessionService.user" (click)="logout()" href="..." class="nav-link nav-icon">
+          Logout
             <clr-icon shape="cog"></clr-icon>
         </a>
     </div>
