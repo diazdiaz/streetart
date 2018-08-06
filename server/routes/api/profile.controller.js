@@ -14,6 +14,7 @@ router.get("/", (req, res, next) => {
 // Retrive DETAIL
 router.get("/:id", (req, res, next) => {
   User.findById(req.params.id)
+  .populate('works')
     .then(user => {
       return res.json(user)
     })

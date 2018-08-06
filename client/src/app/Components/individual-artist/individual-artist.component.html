@@ -1,5 +1,9 @@
 <div *ngIf="user">
 <h1>{{user.name}}</h1>
 <h2>hola</h2>
-<p>{{user.works}}</p>
+<div *ngFor="let work of user.works">
+    {{work.style}}
+    {{work.price}}
+    <img src={{work.image}} alt="">
 </div>
+
