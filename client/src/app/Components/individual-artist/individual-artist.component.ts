@@ -2,14 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'services/user';
 import { SessionService } from 'services/session';
 import { ActivatedRoute, Router } from '@angular/router';
-import { endWith } from "rxjs/operators";
 
 @Component({
-  selector: 'app-edit-profile',
-  templateUrl: './edit-profile.component.html',
-  styleUrls: ['./edit-profile.component.css']
+  selector: 'app-individual-artist',
+  templateUrl: './individual-artist.component.html',
+  styleUrls: ['./individual-artist.component.css']
 })
-export class EditProfileComponent implements OnInit {
+export class IndividualArtistComponent implements OnInit {
 
   user;
  
@@ -30,11 +29,6 @@ export class EditProfileComponent implements OnInit {
 
   ngOnInit() {}
 
-  edit(user) {
-    this.userService.edit(this.user).subscribe(user => {
-      this.user = user;
-      console.log(user);
-      this.router.navigate(["/profile"]);
-    });
-  }
+ 
+  
 }

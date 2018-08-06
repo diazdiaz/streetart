@@ -73,7 +73,7 @@ router.use((err, req, res, next) => {
 });
 
 router.get("/artist", (req, res, next) => {
-  User.find({})
+  User.find({artist:true})
     .then(objects => {
       res.json(objects);
     })

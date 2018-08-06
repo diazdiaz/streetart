@@ -9,7 +9,9 @@ import { environment } from '../src/environments/environment';
 @Injectable()
 export class UserService{
 
-  constructor(private http: Http) {}
+  constructor(private http: Http) {
+    
+  }
 
   getUserDetails() {
     return this.http
@@ -24,6 +26,7 @@ export class UserService{
   }
 
   edit(user) {
+  
     return this.http
       .put(`${environment.BASEURL}/api/profile/edit/${user._id}`, user)
       .pipe(map(res => res.json()));

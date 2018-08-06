@@ -9,6 +9,7 @@ import { NegateNonUserGuard } from './guards/negateNonUser.guard';
 import { isLoggedInGuardService } from './guards/isLoggedIn.guard';
 import { UserProfileComponent } from './Components/user/user-profile/user-profile.component';
 import { EditProfileComponent } from './Components/user/edit-profile/edit-profile.component';
+import { IndividualArtistComponent } from './Components/individual-artist/individual-artist.component';
 
 
 
@@ -24,6 +25,7 @@ export const routes: Routes = [
   { path:'workslist', component:WorksListComponent, canActivate:[isLoggedInGuardService]},
   { path:'profile', component:UserProfileComponent},
   { path:'profile/edit/:id', component:EditProfileComponent},
+  { path:'artists/:id', component:IndividualArtistComponent},
 
-  { path: '**', redirectTo: '' }
+  // { path: '**', redirectTo: '' }
 ];

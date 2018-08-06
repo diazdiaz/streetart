@@ -6,5 +6,5 @@
 
 
 <div *ngFor="let artist of artists"> 
-  {{artist.username}}
+  <a [routerLink]="['/artists',artist._id]"> {{artist.username}} </a>
 </div>

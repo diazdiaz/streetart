@@ -19,6 +19,7 @@ import { WorksService } from "services/works";
 import { EditProfileComponent } from "./Components/user/edit-profile/edit-profile.component";
 import { UserProfileComponent } from "./Components/user/user-profile/user-profile.component";
 import { UserService } from "services/user";
+import { IndividualArtistComponent } from "./Components/individual-artist/individual-artist.component";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UserService } from "services/user";
     WorksListComponent,
     ArtistsComponent,
     EditProfileComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    IndividualArtistComponent
   ],
   imports: [
     BrowserModule,
