@@ -27,5 +27,5 @@ export const routes: Routes = [
   { path:'profile/edit/:id', component:EditProfileComponent},
   { path:'artists/:id', component:IndividualArtistComponent},
 
-  // { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' }
 ];

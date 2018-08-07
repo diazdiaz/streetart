@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('dotenv').load();
 
 const bodyParser   = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -18,7 +19,7 @@ const multer = require('multer');
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/server', {useMongoClient: true})
+  .connect(process.env.MONGO_URL, {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {

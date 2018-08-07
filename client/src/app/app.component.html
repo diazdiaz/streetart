@@ -11,7 +11,6 @@
     <div class="header-nav">
         <a href="..." class="active nav-link" [routerLink]="['/artists']"><span class="nav-text">Artists</span></a>
         <a href="..." class=" active nav-link" [routerLink]="['/profile']"><span class="nav-text">My profile</span></a>
-        <a *ngIf="sessionService.user" href="#" class=" active nav-link" (click)="logout()"><span class="nav-text">Logout</span></a>
         <a href="..." *ngIf="sessionService.user.artist" class="active nav-link" [routerLink]="['/workslist']" ><span class="nav-text">Works</span></a>
         <a href="..." *ngIf="sessionService.user.artist" class="active nav-link" [routerLink]="['/works']"><span class="nav-text">Add a masterpiece</span></a>
         

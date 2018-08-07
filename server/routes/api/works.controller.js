@@ -14,6 +14,8 @@ router.get("/", (req, res, next) => {
 // Create
 router.post("/", (req, res, next) => {
   const { type, style, description, price, image } = req.body.works;
+  
+
 
   const newWork = { type, style, description, price, image };
 

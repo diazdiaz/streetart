@@ -1,10 +1,16 @@
-<p>
-  artists works!
-</p>
-
-<button (click)=artist()>artist</button>
 
 
-<div *ngFor="let artist of artists"> 
-  <a [routerLink]="['/artists',artist._id]"> {{artist.username}} </a>
-</div>
+
+
+<div class="contenedor">
+    <ul class="works" *ngFor="let artist of artists">
+      
+      <li><a [routerLink]="['/artists',artist._id]">
+        <img [src]="artist.image" width=100/>
+      </a>
+      </li>
+      <li> {{ artist.name }} </li>
+      <li> {{ artist.username}}</li>
+     
+    </ul>
+  </div>

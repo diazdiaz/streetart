@@ -36,7 +36,11 @@ router.put("/edit/:id", (req, res, next) => {
         const email = req.body.email != "" ? req.body.email : user.email;
         const name = req.body.name != "" ? req.body.name : user.name;
         const phone = req.body.phone != "" ? req.body.phone : user.phone;
+        const profilepic = req.body.profilepic != "" ? req.body.profilepic : user.profilepic;
         const bio = req.body.bio != "" ? req.body.bio : user.bio;
+        
+        
+
         
         
           const updates = {
@@ -44,7 +48,9 @@ router.put("/edit/:id", (req, res, next) => {
             email,
             name,
             phone,
-            bio
+            bio,
+            profilepic,
+     
            
           };
       

@@ -1,11 +1,41 @@
 <div *ngIf="user">
     
   
-  <button [routerLink]="['/profile/edit',user._id]">Edit profile</button>
-  <div>
+  
 
       <p>Name: {{user.name}}</p>
       <p>Email: {{user.email}}</p>
       <p>Phone Number: {{user.phone}}</p>
+
     
     <div>
+
+
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="card-header">
+             {{user.name}}
+            </div>
+            <div class="card-block">
+                <div class="card-media-block wrap">
+                    <img src="{{user.profilepic}}" class="card-media-image">
+                    <div class="card-media-description">
+                        <span class="card-media-title">
+                            
+                        </span>
+                        <span class="card-media-text">
+                            {{user.bio}}
+                        </span>
+                    </div>
+                </div>
+                <div class="card-text">
+                    ...
+                </div>
+            </div>
+            <div class="card-footer">
+              <button [routerLink]="['/profile/edit',user._id]">Edit profile</button>
+              <div>
+            </div>
+        </div>
+    </div>
+    </div>

@@ -6,7 +6,6 @@ import { routes } from "./routes";
 import { HttpModule } from "@angular/http";
 import { SessionService } from "services/session";
 import { FormsModule } from "@angular/forms";
-import { FileSelectDirective } from "ng2-file-upload";
 import { ClarityModule } from "@clr/angular";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { WorksComponent } from "./Components/works/works.component";
@@ -27,7 +26,6 @@ import { IndividualArtistComponent } from "./Components/individual-artist/indivi
     SignupComponent,
     LoginComponent,
     WorksComponent,
-    FileSelectDirective,
     WorksListComponent,
     ArtistsComponent,
     EditProfileComponent,

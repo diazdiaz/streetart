@@ -7,6 +7,7 @@ const userSchema = new Schema({
   email: {type: String,  match: /\S+@\S+\.\S+/, trim: true},
   name: {type: String },
   phone: {type: Number, match: /^[0-9\-]+$/i, trim: true},
+  profilepic: {type: String},
   artist: {
     type:Boolean,
     required:true

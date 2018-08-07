@@ -14,7 +14,7 @@ interface UserObject{
 export class AppComponent {
   title = 'app';
   user:UserObject;
-  constructor(private sessionService:SessionService){
+  constructor(public sessionService:SessionService){
   }
   
   ngOnInit(){
