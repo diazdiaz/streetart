@@ -1,36 +1,22 @@
 
-<p>WORKS</p>
 
 
-<div class="contenedor" *ngIf="works">
-  <ul class="works" *ngFor="let work of works">
-    
-    <li>
-      <img [src]="work.image" width=100/>
-    
-    </li>
-    <li> {{ work.style }} </li>
-    <li> {{ work.type}}</li>
-    <li>hola</li>
-  </ul>
-</div>
-
-
-
-<!-- <div class="card-columns-4">
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 cardcontainer " *ngFor="let work of works" >
-        <a [routerLink]="['/works',work._id]" class="card clickable">
-            <div class="card-img">
-                <img [src]="work.image" width=100/>
+<div class="clr-row clr-justify-content-around"  *ngIf="works">
+<div *ngFor="let work of works" class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ">
+        <a  class="card clickable">
+            <div class="card-img img-wrapper">
+                <img [src]="work.image" width=100 height=200/>
             </div>
-            <div class="card-block">
-                <p class="card-text">
-                    {{ work.style }}
-                </p>
-                <p class="card-text">
-                    {{ work.type}}
-                </p>
+            <div class="card-block blwrapper">
+                 
+                   <ul class="card-text">
+                        <li> {{ work.style }} </li>
+                        <li> {{ work.type}}</li>
+                   </ul>
+                
+                        
+                
             </div>
         </a>
-    </div>
-</div> -->
+</div>
+</div>

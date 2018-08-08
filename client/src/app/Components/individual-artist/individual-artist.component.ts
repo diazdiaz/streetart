@@ -23,6 +23,7 @@ export class IndividualArtistComponent implements OnInit {
     this.route.params.subscribe(params =>
       this.userService.get(params.id).subscribe(user => {
         this.user = user;
+        console.log(this.user)
       })
     );
   }

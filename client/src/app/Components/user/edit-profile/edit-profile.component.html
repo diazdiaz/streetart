@@ -1,7 +1,7 @@
 <h4> Edit your profile </h4>
 <a [routerLink]="['/profile']">Back to profile</a>
 
-<form clrForm  *ngIf="user">
+<form  *ngIf="user">
   <label>Name</label>
   <input type="text" [(ngModel)]="user.name" name="name" autocomplete='name' required />
 
@@ -12,7 +12,7 @@
   <input type="text" [(ngModel)]="user.phone" name="phone" autocomplete='phone' />
 
   <label>Profile Picture</label>
-  <input type="text" [(ngModel)]="user.profilepic" name="profilepic" autocomplete='profilepic' />
+  <input type="text" [(ngModel)]="user.profilepic" name="profilepic" autocomplete='profilepic' required/>
 
   <label>Bio</label>
   <input type="text" [(ngModel)]="user.bio" name="bio" autocomplete='bio' />
@@ -21,3 +21,5 @@
   <button (click)="edit(user._id)"> Edit </button>
   
   </form>
+
+    

@@ -9,9 +9,7 @@ img {
 ul{
     width: 30%;
     display: inline-block;
-    border: 3px solid rgb(8, 8, 8);
     padding:10px;
-    border-radius: 10px;
     margin: 10px;
     list-style: none;
     text-align: center;
@@ -19,4 +17,18 @@ ul{
 
  .cardcontainer {
     align-content: center;
+ }
+
+ .img-wrapper {
+     display: flex;
+     justify-content: center;
+ }
+
+ .blwrapper {
+     display: flex;
+     justify-content: center;
+ }
+
+ img {
+     padding-top: 20px;
  }
