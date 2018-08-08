@@ -1,12 +1,13 @@
+
 <p>WORKS</p>
 
 
-<div class="contenedor">
+<div class="contenedor" *ngIf="works">
   <ul class="works" *ngFor="let work of works">
     
-    <li><a [routerLink]="['/works',work._id]">
+    <li>
       <img [src]="work.image" width=100/>
-    </a>
+    
     </li>
     <li> {{ work.style }} </li>
     <li> {{ work.type}}</li>

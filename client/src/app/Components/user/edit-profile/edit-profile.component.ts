@@ -3,6 +3,7 @@ import { UserService } from 'services/user';
 import { SessionService } from 'services/session';
 import { ActivatedRoute, Router } from '@angular/router';
 import { endWith } from "rxjs/operators";
+import { ClrFormsNextModule } from "@clr/angular";
 
 @Component({
   selector: 'app-edit-profile',

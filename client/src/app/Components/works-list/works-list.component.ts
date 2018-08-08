@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { WorksService } from 'services/works';
 
@@ -10,10 +11,14 @@ export class WorksListComponent implements OnInit {
 works: Array<any>;
 
   constructor(private wS:WorksService) {
-    this.wS.getList().subscribe(data=> this.works = data);
+    
    }
 
   ngOnInit() {
+    this.wS.getList().subscribe(data=> {
+      this.works = data;
+      console.log(this.works);
+    });
   }
 
 }

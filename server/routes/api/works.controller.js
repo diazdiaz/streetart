@@ -36,6 +36,17 @@ router.get(":id", (req, res, next) => {
     .catch(e => next(e));
 });
 
+// router.get(":id/", (req, res, next) => {
+//   Works.findById(req.params.id)
+//     .populate("user")
+//     .then(object => res.json(object))
+//     .catch(e => next(e));
+// });
+
+
+
+
+
 router.put(":id", (req, res, next) => {
   const { type, style, description, price, image } = req.body;
 

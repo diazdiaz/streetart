@@ -3,23 +3,23 @@
 
 <header class="header-6" *ngIf="sessionService.user">
     <div class="branding">
-        <a href="..." class="nav-link">
-            <clr-icon shape="vm-bug"></clr-icon>
-            <span class="title">Street Art |   Welcome {{ sessionService.user.username }}! </span>
+        <a class="nav-link">
+       
+            <span class="title" [routerLink]="['/workslist']">Street Art |   Welcome {{ sessionService.user.username }}! </span>
         </a>
     </div>
     <div class="header-nav">
-        <a href="..." class="active nav-link" [routerLink]="['/artists']"><span class="nav-text">Artists</span></a>
-        <a href="..." class=" active nav-link" [routerLink]="['/profile']"><span class="nav-text">My profile</span></a>
-        <a href="..." *ngIf="sessionService.user.artist" class="active nav-link" [routerLink]="['/workslist']" ><span class="nav-text">Works</span></a>
-        <a href="..." *ngIf="sessionService.user.artist" class="active nav-link" [routerLink]="['/works']"><span class="nav-text">Add a masterpiece</span></a>
+        <a class="active nav-link" [routerLink]="['/artists']"><span class="nav-text">Artists</span></a>
+        <a class=" active nav-link" [routerLink]="['/profile']"><span class="nav-text">My profile</span></a>
+        <a class="active nav-link" [routerLink]="['/workslist']" ><span class="nav-text">Works</span></a>
+        <a *ngIf="sessionService.user.artist" class="active nav-link" [routerLink]="['/works']"><span class="nav-text">Add a masterpiece</span></a>
         
     </div>
     
     <div class="header-actions">
-        <a *ngIf="sessionService.user" (click)="logout()" href="..." class="nav-link nav-icon">
+        <a *ngIf="sessionService.user" [routerLink]="['/login']" (click)="logout()" href="..." class="nav-link nav-icon">
           Logout
-            <clr-icon shape="cog"></clr-icon>
+            
         </a>
     </div>
 </header>

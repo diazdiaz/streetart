@@ -12,14 +12,17 @@ export class ArtistsComponent implements OnInit {
 
   artists:Array<object>;
   constructor(private session:SessionService, private uS:UserService, private router:Router) {
+    
+    
+  }
+
+  ngOnInit() {
     this.session.artist().subscribe(res=>{
       this.artists = res;
       
-      console.log(res);
+      console.log(this.artists);
     })
   }
-
-  ngOnInit() {}
 
  
   

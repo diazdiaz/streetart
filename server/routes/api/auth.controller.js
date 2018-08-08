@@ -8,6 +8,7 @@ const login = (req, user) => {
   return new Promise((resolve, reject) => {
     req.login(user, err => {
       if (err) {
+        console.log(err)
         reject(new Error("Something went wrong"));
       } else {
         resolve(user);

@@ -31,6 +31,7 @@ export class UserService{
       .put(`${environment.BASEURL}/api/profile/edit/${user._id}`, user)
       .pipe(map(res => res.json()));
   }
+  
 
 
 }

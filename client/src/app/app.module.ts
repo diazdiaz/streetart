@@ -6,7 +6,7 @@ import { routes } from "./routes";
 import { HttpModule } from "@angular/http";
 import { SessionService } from "services/session";
 import { FormsModule } from "@angular/forms";
-import { ClarityModule } from "@clr/angular";
+import { ClarityModule, ClrFormsNextModule } from "@clr/angular";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { WorksComponent } from "./Components/works/works.component";
 import { WorksListComponent } from "./Components/works-list/works-list.component";
@@ -19,6 +19,8 @@ import { EditProfileComponent } from "./Components/user/edit-profile/edit-profil
 import { UserProfileComponent } from "./Components/user/user-profile/user-profile.component";
 import { UserService } from "services/user";
 import { IndividualArtistComponent } from "./Components/individual-artist/individual-artist.component";
+import { FullInfoComponent } from "./Components/full-info/full-info.component";
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { IndividualArtistComponent } from "./Components/individual-artist/indivi
     ArtistsComponent,
     EditProfileComponent,
     UserProfileComponent,
-    IndividualArtistComponent
+    IndividualArtistComponent,
+    FullInfoComponent
+ 
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,8 @@ import { IndividualArtistComponent } from "./Components/individual-artist/indivi
     HttpModule,
     FormsModule,
     ClarityModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ClrFormsNextModule
   ],
   providers: [
       SessionService,
