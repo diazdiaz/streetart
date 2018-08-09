@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
 const worksSchema = new Schema({
-user_id: { type: Schema.Types.ObjectId, ref: "User" },
+userid: { type: Schema.Types.ObjectId, ref: "User" },
 type: {
     type: String,
     enum: ["Sculpture","Painting","Photography","Other"],

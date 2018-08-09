@@ -10,6 +10,7 @@ import { of } from 'rxjs';
 const {BASEURL} = environment;
 
 interface UserObject{
+  _id?: string,
   username:string,
 }
 

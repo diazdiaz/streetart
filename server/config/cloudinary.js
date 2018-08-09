@@ -12,7 +12,7 @@ cloudinary.config({
 
 var storage = cloudinaryStorage({
   cloudinary: cloudinary,
-  folder: 'phones',
+  folder: 'files',
   allowedFormats: ['jpg', 'png'],
   filename: function (req, file, cb) {
     photo = new Date().getTime();

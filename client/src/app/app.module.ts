@@ -20,6 +20,7 @@ import { UserProfileComponent } from "./Components/user/user-profile/user-profil
 import { UserService } from "services/user";
 import { IndividualArtistComponent } from "./Components/individual-artist/individual-artist.component";
 import { FullInfoComponent } from "./Components/full-info/full-info.component";
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { FullInfoComponent } from "./Components/full-info/full-info.component";
     EditProfileComponent,
     UserProfileComponent,
     IndividualArtistComponent,
-    FullInfoComponent
+    FullInfoComponent,
+   
  
   ],
   imports: [
@@ -43,7 +45,8 @@ import { FullInfoComponent } from "./Components/full-info/full-info.component";
     FormsModule,
     ClarityModule,
     BrowserAnimationsModule,
-    ClrFormsNextModule
+    ClrFormsNextModule,
+    FileUploadModule
   ],
   providers: [
       SessionService,

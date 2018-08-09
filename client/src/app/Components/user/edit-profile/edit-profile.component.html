@@ -3,23 +3,27 @@
 
 <div class="form-container">
 <form clrForm class="editform" *ngIf="user">
-  <label>Name</label>
-  <input type="text" [(ngModel)]="user.name" name="name"  required />
+  <label>UserName</label>
+  <input type="text" [(ngModel)]="updates.username" name="name"  required />
 
   <label>Email</label>
-  <input type="text" [(ngModel)]="user.email" name="email"  required />
+  <input type="text" [(ngModel)]="updates.email" name="email"  required />
+
+  <label>Name</label>
+  <input type="text" [(ngModel)]="updates.name" name="name"  required />
+
 
   <label>Phone number</label>
-  <input type="text" [(ngModel)]="user.phone" name="phone"  />
+  <input type="text" [(ngModel)]="updates.phone" name="phone"  />
 
   <label>Profile Picture</label>
-  <input type="text" [(ngModel)]="user.profilepic" name="profilepic"  required/>
+  <input type="file" [(ngModel)]="file" name="file" ng2FileSelect [uploader]="uploader" />
 
   <label>Bio</label>
-  <textarea clrTextarea [(ngModel)]="description" name="description" required></textarea>
+  <textarea clrTextarea [(ngModel)]="updates.bio" name="description" required></textarea>
 
   
-  <button (click)="edit(user._id)"> Edit </button>
+  <button (click)="edit()"> Edit </button>
   
   </form>
 

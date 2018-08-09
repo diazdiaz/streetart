@@ -16,11 +16,7 @@
     <input type="text" [(ngModel)]="newWork.price" name="price" required />
 
     <label>Image</label>
-    <input type="text" [(ngModel)]="newWork.image" name="image" />
-
-    
-
-    
+    <input type="file" [(ngModel)]="file" name="file" ng2FileSelect [uploader]="uploader" />
 
 
   <button (click)="submit()"> Guardar </button>

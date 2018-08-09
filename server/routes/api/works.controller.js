@@ -3,6 +3,8 @@ const router = express.Router();
 const Works = require("../../models/Works");
 const artist = require("../../models/Artista");
 const user = require("../../models/User");
+const multer = require("multer");
+const uploadCloud = require('../../config/cloudinary.js');
 
 // Retrive ALL
 router.get("/", (req, res, next) => {
@@ -12,12 +14,18 @@ router.get("/", (req, res, next) => {
 });
 
 // Create
-router.post("/", (req, res, next) => {
-  const { type, style, description, price, image } = req.body.works;
-  
-
-
-  const newWork = { type, style, description, price, image };
+router.post("/",uploadCloud.single('file'), (req, res, next) => {
+  const { userid,type, style, description, price } = req.body;
+  console.log(userid)
+  const newWork = new Works ({ 
+    
+    userid,
+    type,
+    style,
+    description,
+    price,
+    image:req.file.url
+       });
 
   Works.create(newWork)
     .then(object => {
