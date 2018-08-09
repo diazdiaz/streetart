@@ -2,19 +2,6 @@
 
 
 
-<div class="contenedor">
-    <ul class="works" *ngFor="let artist of artists">
-      
-      <li><a [routerLink]="['/artists',artist._id]">
-        <img [src]="artist.profilepic" width=100/>
-      </a>
-      </li>
-      <li> {{ artist.name }} </li>
-      <li> {{ artist.username}}</li>
-      
-     
-    </ul>
-  </div>
  
 
   <div class="row" >

@@ -74,7 +74,7 @@ export class EditProfileComponent implements OnInit {
     this.uploader.uploadAll();
         this.uploader.onCompleteItem = r => {
           console.log(r)
-          
+    this.router.navigate(['/profile'])
         };
     }
     
