@@ -26,11 +26,11 @@
                         </div>
                     </div>
                     <div class="card-text">
-                        <p>Name: {{user.name}}</p>
-                        <p>Email: {{user.email}}</p>
-                        <p>Phone Number: {{user.phone}}</p>
-                        <p>Email: {{user.email}}</p>
-                        <p>Phone Number: {{user.phone}}</p>
+                        <p><b>Name:</b> {{user.name}}</p>
+                        <p><b>Email:</b> {{user.email}}</p>
+                        <p><b>Phone Number:</b> {{user.phone}}</p>
+                        <p><b>Email:</b> {{user.email}}</p>
+                        <p><b>Phone Number:</b> {{user.phone}}</p>
 
                     </div>
                 </div>
@@ -42,24 +42,25 @@
             </div>
         </div>
 
-
+<div class="worktext"><p>YOUR WORKS</p></div>
 
         <div class="clr-row clr-justify-content-around" *ngIf="user.works">
             <div *ngFor="let u of user.works" class="col-lg-4 col-md- col-sm-6 col-xs-6 ">
-
+                <div class="card">
                 <div class="card-img img-wrapper">
-                    <img [src]="u.image" width=100 height=200/>
+                    <img class="img-down"[src]="u.image" width=100 height=200/>
                 </div>
                 <div class="card-block blwrapper">
 
-                    <ul class="datalist card-text">
+                    <ul class="datalist card-text ">
                         <li> {{u.style}} </li>
- id                       <li> {{u.type}}</li>
+                        
+                        <li> {{u.type}}</li>
                     </ul>
                 </div>
                 <div class="card-footer">
                     <button (click)="deleteWork(u._id)">Remove</button>
                 </div>
-
+                </div>
             </div>
         </div>

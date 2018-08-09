@@ -65,6 +65,7 @@ export class WorksComponent implements OnInit {
       console.log(r)
       
     };
+   this.router.navigate(['/workslist'])
   }
   
   // submit() {
