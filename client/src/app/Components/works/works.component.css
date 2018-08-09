@@ -1,0 +1,11 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.editform {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}

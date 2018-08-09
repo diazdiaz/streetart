@@ -1,19 +1,18 @@
 
 
 
-<div class="clr-row clr-justify-content-around"  *ngIf="works">
-<div *ngFor="let work of works" class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ">
+<div class="clr-row clr-justify-content-around" *ngIf="works">
+<div *ngFor="let work of works" class="col-lg-4 col-md- col-sm-6 col-xs-6 ">
         <a  class="card clickable">
             <div class="card-img img-wrapper">
                 <img [src]="work.image" width=100 height=200/>
             </div>
             <div class="card-block blwrapper">
-                 
-                   <ul class="card-text">
+            
+                    <ul class="datalist card-text">
                         <li> {{ work.style }} </li>
                         <li> {{ work.type}}</li>
-                   </ul>
-                
+                    </ul>
                         
                 
             </div>

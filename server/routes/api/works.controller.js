@@ -30,8 +30,9 @@ router.post("/", (req, res, next) => {
 });
 
 // Retrive DETAIL
-router.get(":id", (req, res, next) => {
-  Works.findById(req.params.id)
+router.get("/:id", (req, res, next) => {
+  user.findById(req.params.id)
+    .populate('works')
     .then(object => res.json(object))
     .catch(e => next(e));
 });
@@ -58,7 +59,7 @@ router.put(":id", (req, res, next) => {
 });
 
 // Retrive DETAIL
-router.delete(":id", (req, res, next) => {
+router.delete("/remove/:id", (req, res, next) => {
   Works.findByIdAndRemove(req.params.id)
     .then(() => res.json({ message: `SUCESSFUL DELETE ${req.params.id}` }))
     .catch(e => next(e));

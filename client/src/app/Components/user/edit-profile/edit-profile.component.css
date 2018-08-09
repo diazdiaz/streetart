@@ -1,0 +1,16 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.editform {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}
+
+textarea {
+    height: 216px;
+    width: 96vh;
+}

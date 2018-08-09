@@ -51,7 +51,7 @@ works:WorksObject;
 
   remove(id) {
     return this.http
-      .delete(`${BASEURL}/api/works/${id}`)
+      .delete(`${BASEURL}/api/works/remove/${id}`)
       .pipe(map(res => res.json()));
   } 
 

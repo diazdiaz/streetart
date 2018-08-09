@@ -1,7 +1,7 @@
 <h1> Add a masterpiece </h1>
 
-
-<form>
+<div class="form-container">
+<form class="editform">
   <select [(ngModel)]="selectedValue" [ngModelOptions]="{standalone: true}"> 
     <option *ngFor="let c of typeworks" [ngValue]="c">{{c.name}}</option>
   </select>
@@ -25,4 +25,4 @@
 
   <button (click)="submit()"> Guardar </button>
 </form>
-
+</div>
